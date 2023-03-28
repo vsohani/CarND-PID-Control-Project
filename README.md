@@ -57,7 +57,7 @@ I used brute force method to tune the parameters before implementing Twiddle. I 
 2. Start increasing value of Kd. Kd should not be too high as it will slow down the system and will prevent it from changing quickly. It shouldnt be too low either as it will not damp the oscillations.
 3. The integral value is used to eliminiate the steady state error.  A high value might cause the system to overshoot.
 
-##Improve the performance
+## Improve the performance
 
 1. Implement new control strategy all together. Use control laws like LQR, MPC, Kanayama.
 2. Consider the rate of updating error. This depends upon the rate at which data is being received from the simulator. Higher grpahics might slow the update rate and hence will create a latency in the control action.
