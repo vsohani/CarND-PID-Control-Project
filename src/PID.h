@@ -31,6 +31,8 @@ class PID {
    */
   double TotalError();
 
+  void Twiddle();
+
  private:
   /**
    * PID Errors
@@ -45,6 +47,11 @@ class PID {
   double Kp;
   double Ki;
   double Kd;
+
+  /** 
+  Previous Value of Errors
+  */
+  double prev_cte;
 };
 
 #endif  // PID_H
