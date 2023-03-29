@@ -9,7 +9,7 @@ Twiddle::~Twiddle() {}
 void Twiddle::init(double Kp, double Ki, double Kd) {
 
     params_ = {Kp, Ki, Kd};
-    param_deltas_ = {Kp/10 , Ki/10 , Kd / 10};
+    param_deltas_ = {Kp/50 , Ki/50 , Kd / 50};
     count_ = 0;
     twiddle_phase_= 0;
     param_num_ = 0;

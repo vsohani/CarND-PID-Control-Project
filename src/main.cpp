@@ -52,10 +52,10 @@ int main() {
   /**
    * TODO: Initialize the pid variable.
    */
-  pid_cte.Init(0.04,0.0001,6.5);
-  pid_speed.Init(0.2,0,0.1);
+  pid_cte.Init(0.125,0.000,6.8);
+  pid_speed.Init(0.2,0.000,1);
 
-  twiddle.init(0.11,0.000006,2.6);
+  twiddle.init(0.125,0.0000,6.8);
 
 
   
@@ -89,7 +89,7 @@ int main() {
           pid_cte.UpdateError(cte);
           steer_value -= pid_cte.TotalError();
 
-          pid_speed.UpdateError((50-speed) - angle*5);
+          pid_speed.UpdateError((45-speed) - angle*5 - cte*2);
            
 
           bool is_sample_period = (++count_ % sample_size == 0) ;
